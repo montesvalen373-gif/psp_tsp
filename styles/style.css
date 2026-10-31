@@ -1,9 +1,645 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.Inicio_1{
-    background-color: #4c5a65;
-    
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*CABECERA Y NAVEGACIÓN*/
+header {
+    background-color: #3d5166; 
+    color: white;
+    padding: 30px 60px;
+}
+
+.navegador_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 35px;
+}
+
+.navegar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navegar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: opacity 0.3s;
+}
+
+.navegar ul li a:hover {
+    opacity: 0.8;
+}
+
+.cabecerainicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.cabecerainicio img {
+    width: 100%;
+    max-width: 350px;
+    justify-self: center;
+}
+
+.cabecerainicio-texto {
+    text-align: left;
+}
+
+.cabecerainicio h1 {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cabecerainicio h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #d0d7de;
+}
+
+.cabecerainicio ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cabecerainicio ul li a {
+    background-color: #0099e5;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0, 153, 229, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.cabecerainicio ul li a:hover {
+    background-color: #007bb8;
+    transform: translateY(-2px);
+}
+
+/* FRANJA DE LOGOS*/
+.logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    background-color: #ecf0f1;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.logos img {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.logos img:hover {
+    opacity: 1;
+}
+
+/* CREADOR*/
+.Creador {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.Creador h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.Creador img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.Creador p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* CERTIFICACIONES*/
+.certificados {
+    padding: 70px 20px;
+    background-color: #f4f6f7;
+    text-align: center;
+}
+
+.certificados > h3 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.certificado-item {
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.certificados h4 {
+    font-size: 1.4rem;
+    color: #0099e5;
+    margin-bottom: 15px;
+}
+
+.certificados ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.certificados ul li {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 1rem;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+footer .logos {
+    background: transparent;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+footer .logos img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+footer .logos img:hover {
+    opacity: 1;
+}
+
+/* Cabecera con imagen de fondo */
+header {
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('../assets/images/cabecera_psp.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 30px 60px;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.inicio h1 {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.inicio p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-bottom: 30px;
+    color: #d0d7de;
+}
+
+.inicio ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inicio ul li a {
+    background-color: #0099e5;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0, 153, 229, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.inicio ul li a:hover {
+    background-color: #007bb8;
+    transform: translateY(-2px);
+}
+
+/*¿Qué es y Objetivo*/
+.que.es, .objetiv {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.que.es h2, .objetiv h2, .cocepto > h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.que.es p, .objetiv p, .cocepto > p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/*SECCIÓN DE NIVELES*/
+.cocepto {
+    padding: 60px 20px;
+    background-color: #f4f6f7;
+    text-align: center;
+}
+
+.nivels {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+
+.nivels > div, .nivel-item {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.nivels h3 {
+    font-size: 1.3rem;
+    color: #0099e5;
+    margin-bottom: 10px;
+}
+
+.nivels p {
+    color: #555;
+    font-size: 0.98rem;
+}
+
+/*VENTAJAS Y DESVENTAJAS*/
+.seccion-ventajas {
+    padding: 70px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.seccion-ventajas > h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.ventajas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.ventaja-item, .desventaja-item {
+    background: #f4f6f7;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.ventaja-item h3, .desventaja-item h3 {
+    font-size: 1.4rem;
+    color: #0099e5;
+    margin-bottom: 15px;
+}
+
+.ventaja-item ul, .desventaja-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.ventaja-item ul li, .desventaja-item ul li {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* CERTIFICACIÓN PSP*/
+.certific {
+    padding: 60px 20px 20px 20px;
+    background-color: #f4f6f7;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certific h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.certific p {
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.certificads {
+    padding: 20px 20px 70px 20px;
+    background-color: #f4f6f7;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.certificads > ul, .certificads > div {
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    list-style: none;
+}
+
+.certificads h3 {
+    font-size: 1.4rem;
+    color: #0099e5;
+    margin-bottom: 15px;
+}
+
+.certificads p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Cabecera con imagen de fondo tsp*/
+header {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../assets/images/cabecera_tsp.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 30px 60px;
+}
+
+/*¿Qué es y Objetivo*/
+.que.es, .objetiv {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.que.es h2, .objetiv h2, .Ciclo > h2, .rol > h2, .vent > h2, .certific > h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.que.es p, .objetiv p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/*CICLO Y ROLES*/
+.Ciclo, .rol {
+    padding: 60px 20px;
+    background-color: #f4f6f7;
+    text-align: center;
+}
+
+.tsp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+
+.tsp-item {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.tsp-item h3 {
+    font-size: 1.3rem;
+    color: #0099e5;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.tsp-item p {
+    color: #555;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+/*VENTAJAS Y DESVENTAJAS*/
+.vent {
+    padding: 70px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.vent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+
+.vent-item {
+    background: #f4f6f7;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.vent-item h3 {
+    font-size: 1.4rem;
+    color: #0099e5;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.vent-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.vent-item ul li {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1rem;
+}
+
+/*SECCIÓN DE CERTIFICACIÓN TSP */
+.certific {
+    padding: 60px 20px;
+    background-color: #f4f6f7;
+    text-align: center;
+}
+
+.certific-contenedor {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.certific-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.certific-item {
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.certific-item h3 {
+    font-size: 1.4rem;
+    color: #0099e5;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.certific-item p, .certific-item ul li {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.certific-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* MEDIA QUERIES PARA MÓVILES */
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    .navegador_1 {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .navegar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cabecerainicio {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px 0;
+    }
+    .cabecerainicio-texto {
+        text-align: center;
+    }
+    .cabecerainicio ul {
+        justify-content: center;
+    }
+    .logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nivels, 
+    .ventajas-grid, 
+    .certificads, 
+    .tsp-grid, 
+    .vent-grid, 
+    .certific-grid {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    footer .logos {
+        justify-content: center;
+    }
 }
