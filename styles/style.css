@@ -11,9 +11,21 @@ body {
     line-height: 1.6;
 }
 
-/*CABECERA Y NAVEGACIÓN*/
 header {
     background-color: #3d5166; 
+    color: white;
+    padding: 30px 60px;
+}
+
+
+header:has(a[href="#niveles"]) {
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('../assets/images/cabecera_psp.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 30px 60px;
+}
+
+header:has(a[href="#Ciclo"]) {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../assets/images/cabecera_tsp.jpg') no-repeat center center/cover;
     color: white;
     padding: 30px 60px;
 }
@@ -239,13 +251,6 @@ footer .logos img:hover {
     opacity: 1;
 }
 
-/* Cabecera con imagen de fondo */
-header {
-    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('../assets/images/cabecera_psp.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 30px 60px;
-}
-
 .inicio {
     display: flex;
     flex-direction: column;
@@ -445,35 +450,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* Cabecera con imagen de fondo tsp*/
-header {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../assets/images/cabecera_tsp.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 30px 60px;
-}
-
-/*¿Qué es y Objetivo*/
-.que.es, .objetiv {
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-}
-
-.que.es h2, .objetiv h2, .Ciclo > h2, .rol > h2, .vent > h2, .certific > h2 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-.que.es p, .objetiv p {
-    color: #555;
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
-
 /*ciclos y roles*/
 .Ciclo, .rol {
     padding: 60px 20px;
@@ -552,12 +528,6 @@ header {
 }
 
 /*CERTIFICACIÓN TSP */
-.certific {
-    padding: 60px 20px;
-    background-color: #f4f6f7;
-    text-align: center;
-}
-
 .certific-contenedor {
     max-width: 800px;
     margin: 0 auto 40px auto;
@@ -597,10 +567,11 @@ header {
     padding-left: 20px;
 }
 
-/*media querists para moviles*/
-
+/*media queries para moviles*/
 @media (max-width: 768px) {
-    header {
+    header,
+    header:has(a[href="#niveles"]),
+    header:has(a[href="#Ciclo"]) {
         padding: 20px;
     }
     .navegador_1 {
